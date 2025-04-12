@@ -7,6 +7,9 @@ Um par de fone de ouvido, a sua lista de reprodução favorita e pronto: você e
 <img width="552" alt="image" src="https://github.com/user-attachments/assets/9873181b-511f-42d9-8cf5-5d5966515634" />
 
 
-# Equipe: <nome-da-equipe>
-1. <Nome de fulano>
-2. <Nome de fulana>
+# Equipe: <garotos-de-programa>
+1. João Pablo
+2. João Gabriel
+3. Rafael Jesus
+4. Daniel Alonso
+5. Erick Sales
