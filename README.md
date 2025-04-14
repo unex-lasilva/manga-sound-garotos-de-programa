@@ -13,3 +13,14 @@ Um par de fone de ouvido, a sua lista de reprodução favorita e pronto: você e
 3. Rafael Jesus
 4. Daniel Alonso
 5. Erick Sales
+  
+# Avaliação das PRs:
+
+| Avaliador     | Rafael | Daniel Alonso | João Gabriel | João Pablo | Erick Sales |
+|---------------|--------|---------------|--------------|------------|-------------|
+| Rafael Jesus  | *      | 0             | 0            | 0          | 0           |
+| Daniel Alonso | 0      | *             | 0            | 0          | 0           |
+| João Gabriel  | 0      | 0             | *            | 0          | 0           |
+| João Pablo    | 0      | 0             | 0            | *          | 0           |
+| Erick Sales   | 0      | 0             | 0            | 0          | *           |
+=======
