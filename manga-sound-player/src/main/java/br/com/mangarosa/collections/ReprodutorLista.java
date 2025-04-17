@@ -30,47 +30,55 @@ public class ReprodutorLista {
             while (ativo) {
                 long duracaoSegundos = clip.getMicrosecondLength() / 1_000_000;
                 long atualSegundos = clip.getMicrosecondPosition() / 1_000_000;
+
                 System.out.println("\n========= Player ===========");
                 System.out.println("Música: " + musica.getNome());
                 System.out.println("Tempo: " + atualSegundos + "s / " + duracaoSegundos + "s");
                 System.out.println("Comandos: 'p' = pausar, 'c' = continuar, 's' = +10s, 'x' = parar");
                 System.out.println("============================");
-                String comando = scanner.nextLine();
-                switch (comando.toLowerCase()) {
-                    case "p":
-                        if (clip.isRunning()) {
-                            posicaoPausada = clip.getMicrosecondPosition();
+
+                if (!clip.isRunning() && !pausado && clip.getMicrosecondPosition() >= clip.getMicrosecondLength()) {
+                    ativo = false;
+                    break;
+                }
+
+                if (System.in.available() > 0) {
+                    String comando = scanner.nextLine();
+                    switch (comando.toLowerCase()) {
+                        case "p":
+                            if (clip.isRunning()) {
+                                posicaoPausada = clip.getMicrosecondPosition();
+                                clip.stop();
+                                pausado = true;
+                                System.out.println("Música pausada.");
+                            }
+                            break;
+                        case "c":
+                            if (pausado) {
+                                clip.setMicrosecondPosition(posicaoPausada);
+                                clip.start();
+                                pausado = false;
+                                System.out.println("Música continuando.");
+                            }
+                            break;
+                        case "s":
+                            long pos = clip.getMicrosecondPosition();
+                            long novaPos = pos + 10_000_000;
+                            clip.setMicrosecondPosition(Math.min(novaPos, clip.getMicrosecondLength() - 1));
+                            break;
+                        case "x":
                             clip.stop();
-                            pausado = true;
-                            System.out.println("Música pausada.");
-                        }
-                        break;
-                    case "c":
-                        if (pausado) {
-                            clip.setMicrosecondPosition(posicaoPausada);
-                            clip.start();
-                            pausado = false;
-                            System.out.println("Música continuando.");
-                        }
-                        break;
-                    case "s":
-                        long pos = clip.getMicrosecondPosition();
-                        long novaPos = pos + 10_000_000;
-                        if (novaPos < clip.getMicrosecondLength()) {
-                            clip.setMicrosecondPosition(novaPos);
-                        } else {
-                            clip.setMicrosecondPosition(clip.getMicrosecondLength() - 1);
-                        }
-                        break;
-                    case "x":
-                        clip.stop();
-                        ativo = false;
-                        System.out.println("Música parada.");
-                        break;
-                    default:
-                        System.out.println("Comando inválido.");
+                            ativo = false;
+                            System.out.println("Música parada.");
+                            break;
+                        default:
+                            System.out.println("Comando inválido.");
+                    }
+                } else {
+                    Thread.sleep(1000);
                 }
             }
+
             clip.close();
             audioStream.close();
         } catch (Exception e) {

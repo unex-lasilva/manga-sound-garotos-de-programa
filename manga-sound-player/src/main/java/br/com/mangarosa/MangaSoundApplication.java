@@ -1,9 +1,10 @@
-package br.com.mangarosa.collections;
+package br.com.mangarosa;
 
 import java.io.File;
 import java.nio.file.*;
 import java.util.Scanner;
 import javax.sound.sampled.*;
+import br.com.mangarosa.collections.*;
 public class MangaSoundApplication {
     private static ListaEncadeada repositorio = new ListaEncadeada();
     private static ListaEncadeada listas = new ListaEncadeada();
