@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="613234e2-6e49-4a0b-bb39-cf7227734abe" name="Changes" comment="" />
+    <list default="true" id="613234e2-6e49-4a0b-bb39-cf7227734abe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/src/main/java/br/com/mangarosa/MangaSoundApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/manga-sound-player/src/main/java/br/com/mangarosa/MangaSoundApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/src/main/java/br/com/mangarosa/collections/ReprodutorLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/manga-sound-player/src/main/java/br/com/mangarosa/collections/ReprodutorLista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/MangaSoundApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/MangaSoundApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/collections/MangaSoundApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/collections/Musica.class" beforeDir="false" afterPath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/collections/Musica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/collections/ReprodutorLista.class" beforeDir="false" afterPath="$PROJECT_DIR$/manga-sound-player/target/classes/br/com/mangarosa/collections/ReprodutorLista.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JPCOMPAN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/unex-lasilva/manga-sound-garotos-de-programa.git",
+    "accountId": "0b91b2c1-e2f5-4096-af91-4e367f7fe0cf"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -36,7 +56,7 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "update/adicionando-funcoes",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.selected.package.tslint": "(autodetect)",
