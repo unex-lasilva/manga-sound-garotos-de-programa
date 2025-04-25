@@ -27,15 +27,17 @@ public class ReprodutorLista {
             boolean pausado = false;
             long posicaoPausada = 0;
             clip.start();
-            while (ativo) {
+            do {
                 long duracaoSegundos = clip.getMicrosecondLength() / 1_000_000;
                 long atualSegundos = clip.getMicrosecondPosition() / 1_000_000;
 
-                System.out.println("\n========= Player ===========");
-                System.out.println("Música: " + musica.getNome());
-                System.out.println("Tempo: " + atualSegundos + "s / " + duracaoSegundos + "s");
-                System.out.println("Comandos: 'p' = pausar, 'c' = continuar, 's' = +10s, 'x' = parar");
-                System.out.println("============================");
+                if(!pausado){
+                    System.out.println("\n========= Player ===========");
+                    System.out.println("Música: " + musica.getNome());
+                    System.out.println("Tempo: " + atualSegundos + "s / " + duracaoSegundos + "s");
+                    System.out.println("Comandos: 'p' = pausar, 'c' = continuar, 's' = +10s, 'x' = parar");
+                    System.out.println("============================");
+                }
 
                 if (!clip.isRunning() && !pausado && clip.getMicrosecondPosition() >= clip.getMicrosecondLength()) {
                     ativo = false;
@@ -77,7 +79,7 @@ public class ReprodutorLista {
                 } else {
                     Thread.sleep(1000);
                 }
-            }
+            } while (ativo);
 
             clip.close();
             audioStream.close();
